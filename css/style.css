@@ -192,7 +192,6 @@ footer {
     line-height: 2;
     padding-left: 15px;
     padding-bottom: 10px;
-    list-style-image: url(media/cog.png);
 }
 
 @media (min-width: 768px) {
@@ -215,7 +214,7 @@ footer {
 }
 
 .opportunities-list {
-    list-style-image: url(media/chat.png);
+    list-style-type: none;
 }
 
 @media (max-width: 768px) {
