@@ -1,0 +1,281 @@
+/*Lorraine Hall Partridge Detroix Class Project for the Mississippi Coding Academies*/
+
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+/* top-naveheader => 131c29
+link-tex 596573
+background f4f4f6
+active-button 
+more-button 213349
+radial-gradient 33597e--0e1620
+nov 21 be8442
+nov 9 bc6142
+nov 17 bd425e
+*/
+
+:root {
+    --prim: #213349;
+    --sec: #ff8901;
+    --text: #596573;
+    --bgColor: #f4f4f6;
+    --buttonColor: #213349;    
+    --headerFont: 'Oswald', sans-serif;
+    --textFont: 'Open Sans', sans-serif;
+}
+
+/*generic rules*/
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bgColor);
+    font-family: var(--textFont);
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    font-family: var(--textFont);
+    color: var(--sec);
+}
+
+p { 
+    font-family: var(--textFont);
+}
+
+.sub-header {
+    font-family: var(--headerFont);
+    text-transform: uppercase;
+}
+
+.sr-only {
+    display: none;
+}
+
+/*end generic rules*/
+
+.top-header {
+    background-color: var(--prim);
+    text-transform: uppercase;
+}
+
+.top-nav-item {
+    font-size: calc(8px + (20 - 8)*(100vw - 300) / (800 - 300));
+    }
+
+    .top-nav-item:last-child {
+        margin-right: 10px;
+    }
+
+@media (max-width: 387px) {
+    .top-header {
+        padding: 3px;
+    }
+
+    .top-nav-link {
+        margin: 0 auto;
+        padding: 5px;
+        font-size: 12px;
+        justify-items: space-between;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-nav-container {
+        justify-content: space-around;
+    }
+}
+
+.main-nav-item {
+    color: var(--bgColor);
+    list-style-type: none;
+    background-color: var(--prim);
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+    font-size: calc(14px +(24 - 14)*(100vw - 300) / (800 - 300));
+    font-family: var(--headerFont);
+    font-weight: 400;
+}
+
+@media (max-width: 354px) {
+    .main-nav-item {
+        width: 100%;
+        }
+}
+
+.main-nav-list{
+    margin: 10px auto;
+
+}
+
+@media (max-width: 576px) {    
+    .main-nav-link {
+        padding: 3px;
+        color: var(--buttonColor);
+        background-color: var(--bgColor);   
+        font-size: calc(12px +(18 - 12)*(100vw - 300) / (800 - 300));
+    }
+}
+
+@media (max-width: 768px) {
+    .content-img {
+        display: block;
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    .content h2{
+        margin: 0 auto;
+        width: 100%;
+        font-size: calc(12px +(28 - 12)*(100vw - 300) / (800 - 300));
+    }
+
+    .content .text {
+        justify-content: justify;
+        background-color: lightgray;
+    }
+}
+
+footer {
+    background-color: var(--prim);
+    margin: 0;
+}
+
+@media (min-width: 576px){
+    .footer-parent {
+        position: relative;
+        height: 800px;
+
+    }
+
+    .footer-more {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .footer-more:hover {
+        font-family: var(--headerFont);
+        text-transform: uppercase;
+        color: var(--sec);
+    }
+}
+
+.main-footer {
+    color: var(--bgColor);
+    background: radial-gradient(at 0% 0%, #34547a, #213349);
+}
+
+.more {
+    color: var(--bgColor);
+    background-color: var(--buttonColor);
+    font-size: calc(12px +(18 - 12)*(100vw - 300) / (800 - 300));
+    font-family: var(--headerFont);
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: color 0.5s ease;
+    margin-bottom: 10px;
+}
+
+.more:hover {
+    font-family: var(--headerFont);
+    text-transform: uppercase;
+    color: var(--sec);
+}
+
+.service-list {
+    font-family: var(--textFont);
+    font-weight: 600;
+    list-style-type: none;
+    line-height: 2;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    list-style-image: url(../media/cog.png);
+}
+
+@media (min-width: 768px) {
+    .service-list {
+        line-height: 2;
+        padding-bottom: 75px;
+    }   
+}
+
+.service-list-item {
+    color: var(--bgColor);
+    list-style-type: none;
+    line-height: 3;
+}
+
+.service-list-item:hover {
+    transition: color 0.5s ease;
+    font-family: var(--textFont);
+    color: var(--sec);
+}
+
+.opportunities-list {
+    list-style-image: url(../media/chat.png);
+}
+
+@media (max-width: 768px) {
+    .opportunities a {
+        font-size: 22px;
+    }
+
+    .news a {
+        font-size: 22px;
+    }
+
+    .service-list-item {
+        line-height: 1.5;
+    }
+}
+
+.news-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.news-list-item .date-div  {
+    text-transform: uppercase;
+}
+
+.date-div {
+    width: 80px;
+    height: 80px;
+    border-radius: 5%;
+    color: var(--bgColor);
+    padding: 0 12px 8px 12px;
+    font-weight: 500;
+}
+
+.div1 {
+    background-color: #be8442;
+}
+
+.div2 { 
+    background-color: #bc6142;
+}
+
+.div3 {
+    background-color: #bd425e;
+}
+
+.date {
+    margin: 0 auto;
+    font-size: 36px;
+}
+.month {
+    margin: 0;
+    font-size: 20px;
+}
+
+.colophon p {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--bgColor);
+    margin: 0;
+}
+
+/*Lorraine Partridge 2021*/
